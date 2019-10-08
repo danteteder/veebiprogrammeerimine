@@ -8,7 +8,7 @@ function signUp($name, $surname, $email, $gender, $birthDate, $password) {
     echo $conn->error; 
 
     //tekitame parooli räsi(hash) ehk krüpteerime
-    $options = ["cost" => 12, "salt" => substr(sha1(rand()), 0, 22);
+    $options = ["cost" => 12, "salt" => substr(sha1(rand()), 0, 22];
     $pwdhash = password_hash($password, PASSWORD_BCRYPT, $options);
 
     $stmt->bind_param("sssiss", $name, $surname, $birthDate, $gender, $email, $pwdhash);
